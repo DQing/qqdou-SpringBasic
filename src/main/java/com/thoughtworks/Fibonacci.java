@@ -3,7 +3,7 @@ package com.thoughtworks;
 class Fibonacci {
     long calculate(int index) {
         if (index <= 0) {
-            return 0;
+            throw new IllegalArgumentException("number is too small");
         }
         if (index > 50) {
             throw new IllegalArgumentException("number is too big");

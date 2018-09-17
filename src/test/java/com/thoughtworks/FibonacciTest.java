@@ -9,8 +9,7 @@ class FibonacciTest {
     @Test
     void should_return_0_when_input_less_than_1() {
         Fibonacci fibonacci = new Fibonacci();
-        long actual = fibonacci.calculate(-2);
-        assertEquals(0, actual);
+        assertThrows(IllegalArgumentException.class, () -> fibonacci.calculate(-2),"number is too small");
     }
     @Test
     void should_return_1() {
